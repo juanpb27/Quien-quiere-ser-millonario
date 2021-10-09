@@ -1,6 +1,6 @@
 #-----------Clase Jugador------------
 
-class Jugador():
+class Jugador:
 
     #Datos iniciales del jugador
     def __init__(self, nombre):
@@ -8,7 +8,7 @@ class Jugador():
         self.puntaje = 0
 
     def responder(self):
-        respuesta = input("¿Cuál es su respuesta? Si desea retirarse escriba la letra r").lower()
+        respuesta = input("¿Cuál es su respuesta? Si desea retirarse escriba la letra r: ").lower()
         return respuesta
 
     def ganar(self):

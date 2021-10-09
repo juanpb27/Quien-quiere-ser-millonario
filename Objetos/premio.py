@@ -1,6 +1,6 @@
 #-----------Clase Premio------------
 
-class Premio():
+class Premio:
 
     #Se define el tipo de premio y el valor acumulado
     def __init__(self, tipo):
