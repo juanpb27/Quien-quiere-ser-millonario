@@ -7,7 +7,7 @@ class Juego:
         self.banco     = banco # Bancos cargados en un archivo
         self.rondas    = rondas # Numero total de rondas
         self.nivel     = ["(Facil)", "(Intermedio)", "(Avanzado)", "(Experto)", "(Leyenda)"]
-        self.categoria = ["1", "2", "3", "4", "5"]
+        self.categoria = ["Matemáticas", "Sistema Solar", "Capitales", "Historia", "Sofka"]
         self.valor     = [100, 200, 500, 1000, 5000]
         self.tipo      = tipo
         # Contador auxiliar para manejo de listas
