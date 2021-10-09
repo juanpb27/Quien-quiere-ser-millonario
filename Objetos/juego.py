@@ -13,10 +13,9 @@ class Juego:
         # Contador auxiliar para manejo de listas
         self.aux = 0
 
-
     # Empezar el juego creando los objetos
     def iniciar(self):
-        print("¡Bievenido al juego de Preguntas y Respuestas! \n")
+        print("¡Bievenido al juego de Preguntas y Respuestas!")
         nombre = input("Digite su nombre: ")
         return nombre
 
@@ -26,6 +25,7 @@ class Juego:
 
     # Finalizar el juego por retiro o respuesta incorrecta - HACE FALTA QUE GUARDE LOS DATOS
     def finalizar(self, nombre, acumulado):
-        print("¡Juego finalizado!")
-        print("Nombre: ", nombre)
-        print("Premio: ", acumulado)
+        print("-----------------------------------------------------------------")
+        print("                  ¡Juego finalizado!\n")
+        print("                   Nombre: ", nombre)
+        print("                   Premio: ", acumulado)

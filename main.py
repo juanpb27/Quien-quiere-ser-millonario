@@ -17,10 +17,28 @@ jugador  = Jugador(juego.iniciar())
 pregunta = Preguntas(bancos[juego.aux])
 premio   = Premio(tipo)
 
-# Realizar la pregunta de la ronda
-while ((pregunta.acierta == True) and (juego.aux < 5)):
+# Realizar la pregunta de cada ronda
+while ((pregunta.resultado == 2) and (juego.aux < 5)):
+    # Establecer los datos de la ronda y mostrarlos
     ronda = Ronda(juego.aux, juego.nivel[juego.aux], juego.categoria[juego.aux], juego.valor[juego.aux])
-    ronda.mostrardatos(tipo)
+    ronda.mostrardatos(tipo, premio.acumulado)
+    # Elegir pregunta aleatoria, mostrar y validar respuesta del jugador
     pregunta.mostrar()
     pregunta.validar(jugador.responder())
+
+    # Si el jugador se retira
+    if pregunta.resultado == 1:
+        jugador.retirar(premio.acumulado, tipo)
+    # Si el jugador acierta
+    elif pregunta.resultado == 2:
+        premio.acumular(ronda.valor)
+        # Si era la ronda final
+        if ronda.numero == 5:
+            jugador.ganar(premio.acumulado, tipo)
+    # Si el jugador falla
+    else:
+        jugador.perder()
+    
     juego.avanzar()
+
+juego.finalizar(jugador.nombre, jugador.puntaje)

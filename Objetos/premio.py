@@ -7,5 +7,5 @@ class Premio:
         self.tipo = tipo
         self.acumulado = 0
 
-    def acumular(self):
-        self.acumulado += Ronda.valor
+    def acumular(self, valor):
+            self.acumulado += valor
