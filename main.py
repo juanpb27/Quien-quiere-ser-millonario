@@ -32,13 +32,15 @@ while ((pregunta.resultado == 2) and (juego.aux < 5)):
     # Si el jugador acierta
     elif pregunta.resultado == 2:
         premio.acumular(ronda.valor)
-        # Si era la ronda final
+           # En la ronda final
         if ronda.numero == 5:
+            juego.avanzar()
             jugador.ganar(premio.acumulado, tipo)
+        # En una ronda cualquiera: Cambia el banco de preguntas
+        else:
+            pregunta.banco = bancos[juego.avanzar()]
     # Si el jugador falla
     else:
         jugador.perder()
-    
-    juego.avanzar()
 
 juego.finalizar(jugador.nombre, jugador.puntaje)

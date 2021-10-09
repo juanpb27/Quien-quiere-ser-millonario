@@ -22,6 +22,7 @@ class Juego:
     # Avanzar de ronda
     def avanzar(self):
         self.aux += 1
+        return self.aux
 
     # Finalizar el juego por retiro o respuesta incorrecta - HACE FALTA QUE GUARDE LOS DATOS
     def finalizar(self, nombre, acumulado):
