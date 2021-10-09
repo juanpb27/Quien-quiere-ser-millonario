@@ -1,40 +1,32 @@
 #-----------Clase Pregunta------------
-from .juego import Juego
 import random
 
-class Preguntas(Juego):
+class Preguntas:
 
-    #Carga del banco de preguntas
+    # Carga del banco de preguntas
     def __init__(self, banco):
-        super().__init__(Jugador, Preguntas, Premio, Ronda)
-        self.banco  = banco  #Banco de preguntas actual
-        self.eleccion = {}   #Pregunta elegida en cada ronda
+        self.banco  = banco  # Banco de preguntas actual
+        self.eleccion = {}   # Pregunta elegida en cada ronda
+        self.resultado = 2  # 1-Retira ; 2-Acierto ; 3-Fallo
 
-
+    # Mostrar las preguntas escogidas aleatoriamente y sus respectivas opciones
     def mostrar(self):
         self.eleccion = random.choice(self.banco)
-        print("Premio: ", self.ronda.valor, self.premio.tipo)
-        print("Pregunta: ", self.eleccion.get('pregunta'))
-        print("Opciones: ", self.eleccion.get('opciones'))
+        print("\nPregunta: ", self.eleccion.get('pregunta'))
+        print("Opciones: ", self.eleccion.get('opciones'),"\n")
 
-    def validar(self):
+    # Validar la respuesta del jugador
+    def validar(self,respuesta):
         # Si el jugador se retira
-        if Jugador.responder() == 'r':
-            Jugador.ganar()
+        if respuesta == 'r':
+            self.resultado = 1
         
         # Si el jugador acierta
-        elif Jugador.responder() == self.eleccion.get('respuesta'):
-            # Si acierta la ronda final
-            if Ronda.numero == self.r:
-                Jugador.ganar()
-            # Si acierta una ronda diferente
-            else:
-                print("¡Respuesta correcta!")
-                Juego.avanzar()
+        elif respuesta == self.eleccion.get('respuesta'):
+            print("¡Respuesta correcta!")
+            self.resultado = 2
         
         # Si el jugador falla
         else:
             print("¡Respuesta incorrecta!")
-            Jugador.perder()
-            Juego.finalizar()
-        
+            self.resultado = 3
