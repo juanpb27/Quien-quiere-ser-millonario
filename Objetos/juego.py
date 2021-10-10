@@ -1,4 +1,5 @@
 #------------Clase Juego------------
+import csv, operator
 
 class Juego:
     
@@ -10,6 +11,8 @@ class Juego:
         self.categoria = ["Matemáticas", "Sistema Solar", "Capitales", "Historia", "Sofka"]
         self.valor     = [100, 200, 500, 1000, 5000]
         self.tipo      = tipo
+        self.registro  = 'registro.csv'
+        self.historial = {}
         # Contador auxiliar para manejo de listas
         self.aux = 0
 
@@ -24,9 +27,29 @@ class Juego:
         self.aux += 1
         return self.aux
 
-    # Finalizar el juego por retiro o respuesta incorrecta - HACE FALTA QUE GUARDE LOS DATOS
+    # Finalizar el juego y registrar resultado
     def finalizar(self, nombre, acumulado):
         print("-----------------------------------------------------------------")
-        print("                  ¡Juego finalizado!\n")
-        print("                   Nombre: ", nombre)
-        print("                   Premio: ", acumulado)
+        print("                     ¡Juego finalizado!")
+        print("                      Nombre: ", nombre)
+        print("                      Premio: ", acumulado)
+
+        with open(self.registro, 'a', newline='') as archivo:
+            escribir = csv.writer(archivo)
+            escribir.writerow([nombre, acumulado])
+                   
+        with open(self.registro, 'r', newline='') as archivo:
+            leer    = csv.reader(archivo)
+            archivo_org = sorted(archivo, key=operator.itemgetter(2), reverse=True)
+        """
+        with open(self.registro, 'w', newline='\n') as archivo: 
+            escribir = csv.writer(archivo)
+            escribir.writerow(archivo_org)  
+        """
+        with open(self.registro, 'r', newline='') as archivo: 
+            leer = csv.reader(archivo)   
+            print("-----------------------------------------------------------------")
+            print("                  REGISTRO DE JUGADORES")
+            for fila in leer:
+                print("                  ", fila[0], "---", fila[1], self.tipo)
+        print("-----------------------------------------------------------------")
