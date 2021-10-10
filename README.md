@@ -17,7 +17,7 @@ _Este proyecto fue desarrollado con **Python 3.9.7**_
 _Todo el proyecto está configurado para que no tengas que cargar archivos adicionales o realizar ajustes. Sin embargo, si deseas realizar modificaciones,
 a continuación están los aspectos más importantes:_
 
-1. _ Debido a que cada ronda tiene preguntas de diferentes categorias, debes cargar 5 bancos diferentes:_
+1. _Debido a que cada ronda tiene preguntas de diferentes categorias, debes cargar 5 bancos diferentes:_
 
 ```
 from banco import banco1, banco2, banco3, banco4, banco5
