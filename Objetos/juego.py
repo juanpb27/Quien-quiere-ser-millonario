@@ -38,14 +38,6 @@ class Juego:
             escribir = csv.writer(archivo)
             escribir.writerow([nombre, acumulado])
                    
-        with open(self.registro, 'r', newline='') as archivo:
-            leer    = csv.reader(archivo)
-            archivo_org = sorted(archivo, key=operator.itemgetter(2), reverse=True)
-        """
-        with open(self.registro, 'w', newline='\n') as archivo: 
-            escribir = csv.writer(archivo)
-            escribir.writerow(archivo_org)  
-        """
         with open(self.registro, 'r', newline='') as archivo: 
             leer = csv.reader(archivo)   
             print("-----------------------------------------------------------------")
