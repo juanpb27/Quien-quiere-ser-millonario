@@ -43,4 +43,5 @@ while ((pregunta.resultado == 2) and (juego.aux < 5)):
     else:
         jugador.perder()
 
+#Finalizar juego
 juego.finalizar(jugador.nombre, jugador.puntaje)
