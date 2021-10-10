@@ -10,7 +10,7 @@ class Ronda:
         self.valor = valor
 
     def mostrardatos(self, tipo, acumulado):
-        print("-------------------------------------------")
+        print("-------------------------------------------------------------------------")
         print("              Ronda", self.numero, self.nivel,)
         print("Categoria: ", self.categoria)
         print("Premio de la ronda: ", self.valor, tipo)
