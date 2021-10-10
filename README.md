@@ -1,12 +1,12 @@
 # Quien-quiere-ser-millonario
 
-_*Quien quiere ser millonario* es un entretenido concurso de preguntas y respuestas. Está compuesto por 5 rondas de diferente nivel y categoría.
+**Quien quiere ser millonario** _es un entretenido concurso de preguntas y respuestas. Está compuesto por 5 rondas de diferente nivel y categoría.
 En cada ronda se debe responder 1 pregunta de opción múltiple y única respuesta, extraída aleatoriamente de un banco. El jugador va
-ganando premios por ronda, y puede retirarse con el valor acumulado antes de responder, pero **si se equivoca pierde TODO**_
+ganando premios por ronda, y puede retirarse con el valor acumulado antes de responder, pero_ **si se equivoca pierde TODO**
 
 ## Comenzando 🛠️
 
-_Para desplegar este proyecto en tu pc puedes iniciar descargando el repositorio y utilizar un editor de código como Visual Studio Code._
+_Para desplegar este proyecto en tu pc puedes iniciar descargando el repositorio y utilizar un editor de código como **Visual Studio Code.**_
 
 ### Pre-requisitos 📋
 
