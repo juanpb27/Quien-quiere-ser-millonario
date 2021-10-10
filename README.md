@@ -1,8 +1,8 @@
 # Quien-quiere-ser-millonario
 
-**Quien quiere ser millonario** _es un entretenido concurso de preguntas y respuestas. Está compuesto por 5 rondas de diferente nivel y categoría.
+_**"Quien quiere ser millonario"** es un entretenido concurso de preguntas y respuestas. Está compuesto por 5 rondas de diferente nivel y categoría.
 En cada ronda se debe responder 1 pregunta de opción múltiple y única respuesta, extraída aleatoriamente de un banco. El jugador va
-ganando premios por ronda, y puede retirarse con el valor acumulado antes de responder, pero_ **si se equivoca pierde TODO**
+ganando premios por ronda, y puede retirarse con el valor acumulado antes de responder, pero **si se equivoca pierde TODO**_
 
 ## Comenzando 🛠️
 
